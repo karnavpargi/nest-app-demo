@@ -30,6 +30,7 @@ export class AppController {
   @Post('uploadFile')
   @UseInterceptors(FileInterceptor('file'))
   uploadFile(@UploadedFile() file, @Body() userData: CompanyRegister) {
+    // TODO : upload to server pending
     console.log(file, userData);
     return file;
   }
